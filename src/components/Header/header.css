@@ -9,6 +9,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
 }
 
 #h-menu-icon1 {
@@ -25,6 +30,7 @@
     background-color: white;
     position:fixed;
     top: 70px;
+    z-index: 100;
 
     padding: 20px;
     border-radius: 10px;

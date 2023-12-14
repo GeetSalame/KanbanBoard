@@ -2,8 +2,9 @@ import Bypriority from "./components/DisplayBody/Bypriority";
 import Bystatus from "./components/DisplayBody/Bystatus";
 import Byuser from "./components/DisplayBody/Byuser";
 import Header from "./components/Header/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound";
+import './index.css';
 
 function App() {
   return (

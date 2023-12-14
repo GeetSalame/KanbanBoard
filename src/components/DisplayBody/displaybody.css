@@ -1,0 +1,31 @@
+#by-status{
+    display: flex;
+    /* width: fit-content; */
+}
+
+.catg-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 15px 20px;
+    padding: 0 10px;
+}
+
+.catg-left, .catg-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.catg-name{
+    font-weight: bold;
+}
+
+.catg-count{
+    color: grey;
+}
+
+.status-icon, .add-icon{
+    height: 15px;
+}
