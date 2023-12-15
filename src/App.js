@@ -5,12 +5,13 @@ import Header from "./components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound";
 import './index.css';
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div id="maincontainer">
+      <div id="maincontainer" className="mainc">
         <Routes>
           <Route path="/" element={<Bystatus />} />
           <Route path="/user" element={<Byuser />} />
@@ -18,6 +19,7 @@ function App() {
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -21,6 +21,10 @@ body {
   /* overflow-y: scroll; */
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
 
 .btn1 {
   font-family: 'Roboto', sans-serif;
@@ -55,4 +59,49 @@ body {
   height: 100vh;
   margin-top: 70px;
   padding: 0 30px;
+  overflow-x: scroll;
+}
+
+.mainc::-webkit-scrollbar {
+  background-color: var(--body-clr);
+  border-radius: 10px;
+  height: 10px;
+}
+
+.mainc::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#footer {
+  margin: 20px 0;
+}
+
+#footer>p {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: .02rem;
+  text-align: center;
+  opacity: .5;
+}
+
+#footer>p>a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+#footer>p>a:hover {
+  text-decoration: underline;
+}
+
+/*--------------- Responsiveness  -------------*/
+@media screen and (max-width : 600px) {
+  #maincontainer {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer>p {
+    font-size: small;
+  }
 }

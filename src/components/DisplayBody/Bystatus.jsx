@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Kanbancard from '../KanbanCard/Kanbancard';
 import '../DisplayBody/displaybody.css';
-// import { kanbanData } from '../../services/api';
 
 function Bystatus() {
     const API_url = "https://api.quicksell.co/v1/internal/frontend-assignment";

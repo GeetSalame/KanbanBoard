@@ -1,5 +1,6 @@
 #by-status, #by-user, #by-priority{
     display: flex;
+    flex-direction: row;
     /* width: fit-content; */
 }
 
@@ -29,4 +30,18 @@
 
 .status-icon, .add-icon{
     height: 15px;
+}
+
+
+/*--------------- Responsiveness  -------------*/
+@media screen and (max-width : 600px) {
+    #by-status, #by-user, #by-priority{
+        flex-direction: column;
+    }
+
+    .catg-head{
+        margin: 30px 15px 20px;
+        padding: 0 10px;
+        width: 350px;
+    }
 }
