@@ -94,6 +94,14 @@ body {
   text-decoration: underline;
 }
 
+#pagenotfound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
 /*--------------- Responsiveness  -------------*/
 @media screen and (max-width : 600px) {
   #maincontainer {
@@ -104,5 +112,9 @@ body {
 
   #footer>p {
     font-size: small;
+  }
+
+  #pagenotfound>img{
+    width: 90vw;
   }
 }
