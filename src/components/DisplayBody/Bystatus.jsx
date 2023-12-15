@@ -59,9 +59,25 @@ function Bystatus() {
                 </div>
                 <div className='cards-display'>
                     {
-                        Backlog.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            Backlog
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            Backlog
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -79,9 +95,25 @@ function Bystatus() {
                 </div>
                 <div className='cards-display'>
                     {
-                        Inprogress.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            Inprogress
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            Inprogress
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -99,9 +131,25 @@ function Bystatus() {
                 </div>
                 <div className='cards-display'>
                     {
-                        Todo.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            Todo
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            Todo
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -119,9 +167,25 @@ function Bystatus() {
                 </div>
                 <div className='cards-display'>
                     {
-                        Canceled.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            Canceled
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            Canceled
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -139,9 +203,25 @@ function Bystatus() {
                 </div>
                 <div className='cards-display'>
                     {
-                        Done.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            Done
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            Done
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>

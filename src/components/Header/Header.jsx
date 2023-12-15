@@ -22,7 +22,7 @@ function Header() {
             icon2.style.transform = "rotate(0deg)";
         }
     }
-    
+
     const handleNavigation = (e) => {
         navigate(`/${e.target.value}`);
         let menu2 = document.getElementById("menu2");
@@ -31,9 +31,14 @@ function Header() {
         icon2.style.transform = "rotate(0deg)";
     }
 
+    const handleOrdering = (e) => {
+        localStorage.setItem("Ordering", e.target.value);
+    }
+
     useEffect(() => {
         let loc = window.location.href.split('/').slice(-1)[0];
         document.getElementById("groupingElement").value = loc;
+        localStorage.getItem("Ordering")? document.getElementById("orderingElement").value = localStorage.getItem("Ordering"):<></>;
     }, [])
 
     return (
@@ -55,7 +60,7 @@ function Header() {
                 </div>
                 <div id="ordering">
                     <p>Ordering</p>
-                    <select name="" id="">
+                    <select name="" id="orderingElement" onChange={(e) => handleOrdering(e)}>
                         <option value="Priority">Priority</option>
                         <option value="Title">Title</option>
                     </select>

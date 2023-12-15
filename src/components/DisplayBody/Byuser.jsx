@@ -66,9 +66,25 @@ function Byuser() {
                 </div>
                 <div className='cards-display'>
                     {
-                        User1.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            User1
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            User1
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -86,9 +102,25 @@ function Byuser() {
                 </div>
                 <div className='cards-display'>
                     {
-                        User2.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            User2
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            User2
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -106,9 +138,25 @@ function Byuser() {
                 </div>
                 <div className='cards-display'>
                     {
-                        User3.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            User3
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            User3
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -126,9 +174,25 @@ function Byuser() {
                 </div>
                 <div className='cards-display'>
                     {
-                        User4.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            User4
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            User4
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>
@@ -146,9 +210,25 @@ function Byuser() {
                 </div>
                 <div className='cards-display'>
                     {
-                        User5.map((card) =>
-                            <Kanbancard cardObj={card} />
-                        )
+                        localStorage.getItem("Ordering") == "Title" ?
+                            User5
+                                .sort(function (a, b) {
+                                    var textA = a.title.toUpperCase();
+                                    var textB = b.title.toUpperCase();
+                                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                ) :
+                            User5
+                                .sort(function (a, b) {
+                                    var textA = a.priority;
+                                    var textB = b.priority;
+                                    return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+                                })
+                                .map((card) =>
+                                    <Kanbancard cardObj={card} />
+                                )
                     }
                 </div>
             </div>

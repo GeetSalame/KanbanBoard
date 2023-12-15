@@ -7,7 +7,7 @@ function Kanbancard(props) {
     <div id='kanbancard'>
         <div id='card-top'>
             <p id='ticket-id'>{props.cardObj?.id}</p>
-            <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="user-icon" id='user-icon'/>
+            {(window.location.href.split('/').slice(-1)[0] != 'user')? <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="user-icon" id='user-icon'/>:<></>}
         </div>
         <div id='card-middle'>
             <p id='card-title'>{props.cardObj?.title}</p>
