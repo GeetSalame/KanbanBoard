@@ -60,6 +60,7 @@ body {
   margin-top: 70px;
   padding: 0 30px;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .mainc::-webkit-scrollbar {
