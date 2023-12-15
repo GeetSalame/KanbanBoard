@@ -1,4 +1,4 @@
-#by-status{
+#by-status, #by-user, #by-priority{
     display: flex;
     /* width: fit-content; */
 }
@@ -9,6 +9,7 @@
     align-items: center;
     margin: 30px 15px 20px;
     padding: 0 10px;
+    width: 350px;
 }
 
 .catg-left, .catg-right{
